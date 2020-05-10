@@ -1,0 +1,236 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(218, 212, 212);
+    height: 100vh;
+    display: flex;
+}
+
+/* the below relates to the banners - top and bottom */
+
+.box1 {
+    background-color: rgb(84, 218, 218);
+    padding: 15px;
+    width: 100vw;
+}
+
+.box2 {
+    background-color: rgb(160, 245, 245);
+    padding: 15px;
+    width: 100vw;
+}
+
+.box3 {
+    background-color: rgb(202, 250, 250);
+    padding: 15px;
+    width: 100vw;
+}
+
+.topbanner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1; 
+}
+
+.bottombanner {
+    position: fixed;
+    bottom: 0;
+    left: 0; 
+    z-index: 1;
+}
+
+/* the above relates to the banners - top and bottom */
+
+h1 {
+    font-weight: bold;
+    font-size: 35px;
+    position: fixed;
+     left: 15px;
+     top: 12px;
+     z-index: 2;
+     color: rgb(139, 116, 94);
+    background-color: rgb(218, 212, 212);
+    text-align: center;
+    border: 8px solid cornsilk;
+    border-radius: 10px;
+     padding: 5px;
+     margin: none;
+}
+
+.hello {
+    position: fixed;
+    top: 100px;
+    z-index: 1;
+    padding: 5px 30px 5px 30px;
+    border: 3px solid cornsilk;
+    border-radius: 10px;
+    left: 15px;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: rgb(202, 250, 250);
+    
+}
+
+form {
+    position: absolute;
+    top: 26%;
+    left: 15%;
+    font-size: 20px;
+}
+
+.whoareyou {
+    font-size: 25px;
+    font-weight: bold;
+    border: 8px solid cornsilk;
+    background-color: rgb(252, 208, 208);
+    padding: 10px;
+    margin: none;
+    border-radius: 10px;
+}
+
+ #name {
+      transition: transform .6s;
+      padding: 5px 5px;
+      margin: 8px 0;
+      border-radius: 4px;
+      height: 50px;
+      Width: 400px;
+      font-size: 16px;
+     background-color: rgb(243, 232, 217);
+  }
+
+#name:focus {
+  transform: scale(2, 2);
+  transform-origin: -150 -100;
+  position: relative;
+  background-color: rgb(252, 208, 208);
+}
+
+#name:valid {
+    transform: scale(2, 2); 
+    transform-origin: -150 -100;
+    position: relative;
+    background-color: rgb(207, 245, 158);
+}
+
+.textandface {
+    display: flex; 
+    position: relative;
+    top: 150px; 
+    left: 50px;
+    flex-wrap: wrap;
+}
+
+.centretext {
+    max-width: 50%;
+    margin-right: 50px;
+    margin-bottom: 30px;
+}
+.centretext p {
+    margin-top: 30px;
+}
+
+#face {
+    margin: 10px 60px 30px 30px;
+    max-width: 240px;
+    height: auto;
+}
+
+.picbox {
+    display: flex;
+    position: relative;
+    top: 16%;
+    padding-bottom: 100px;
+    flex-wrap: wrap;
+}
+
+.interestpic {
+    position: relative;
+    max-width: 290px;
+    height: auto;
+    margin: 45px; 
+}
+
+/* below are the effects of clicking an interest picture */
+
+input[type=checkbox] {
+    display: none;
+  }
+  
+.container img {
+    transition: transform 0.5s, opacity 0.7s;
+    cursor: zoom-in;
+  }
+
+input[type=checkbox]:checked ~ label > img {
+    transform: scale(1.15);
+    opacity: 0.3; 
+    cursor: zoom-out;
+  }
+
+/* below is the background settings for each of the interest images */
+
+.planttext {
+    background-image: url(images/planttext.png);
+}
+
+.amttext {
+    background-image: url(images/amttext.png);
+}
+
+.technologytext {
+    background-image: url(images/technologytext.png);
+}
+
+.mycologytext {
+    background-image: url(images/mycologytext.png);
+}
+
+.bakingtext {
+    background-image: url(images/bakingtext.png);
+}
+
+.backgroundcentre {
+    background-size: 370px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* below is the media query section */
+
+@media screen and (max-width: 630px){
+    .centretext {
+        max-width: 80%;
+    }
+    #face {
+        margin: 10px 60px 70px 20px;
+        
+    }
+    .backgroundcentre {
+        background-size: 315px;
+    }
+}
+
+@media screen and (max-width: 830px){
+  
+    .backgroundcentre {
+        background-size: 315px;
+    }
+}
+
+@media screen and (min-width: 857px){
+    .interestpic {
+        max-width: 480px; 
+    }
+    #face {
+        max-width: 300px;
+        margin-right: 100px;
+    }
+}
